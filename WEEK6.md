@@ -18,7 +18,7 @@ For this assignment you will write a program to analyze a dataset containing inf
 
 The dataset you will be using comes from OurWorldInData.org from an article on the Spanish Flu. The first graph on that page shows the life expectancies over the years for various countries.
 
-You can download the dataset directly here: life-expectancy.csv. This is a .csv (Comma Separated Values) file that contains the data you'll need with each column separated by commas. There are roughly 19,000 rows in this dataset.
+You can download the dataset directly here: [life-expectancy.csv](https://byui-cse.github.io/cse110-ww-course/week06/life-expectancy.csv). This is a .csv (Comma Separated Values) file that contains the data you'll need with each column separated by commas. There are roughly 19,000 rows in this dataset.
 
 This dataset is licensed under the Creative Commons BY license, you may also read the Life Expectancy Data License.
 
