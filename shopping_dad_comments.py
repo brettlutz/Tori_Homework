@@ -23,6 +23,12 @@ def display_cart(cart):
 
 print('\n Shopping Cart Application!')
 
+# TODO from dad. make this all into a function, and then call the function after each choice
+# this will get the looping you want. You then need to call this after it is defined in order to start
+# it. This only needs to be called once in each option besides 5, just as the very last
+# option outside any other if/else logic. By changing this it also doesn't require setting the list
+# of choices and enter your choice as constants since they are only typed out once.
+
 
 def handle_input():
     print('1. add to cart \n 2. display cart \n 3. remove item \n 4. compute total \n 5. quit')
