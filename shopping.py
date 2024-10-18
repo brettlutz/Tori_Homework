@@ -19,7 +19,10 @@ print('\n Shopping Cart Application!')
 print('1. add to cart \n 2. display cart \n 3. remove item \n 4. compute total \n 5. quit')
 
 choice = input('enter your choice: ')
-if choice == '1':
+if choice == '5':
+  print('goodbye :)')
+  quit
+elif choice == '1':
   item_name = input('What would you like to add to your cart?: ')
   item_price = float(input('Enter Item Price: $'))
   item = {'name': item_name, 'price': item_price}
@@ -50,9 +53,7 @@ elif choice == '4':
   print (f'your total is ${total_price:.2f}')
   print('1. add to cart \n 2. display cart \n 3. remove item \n 4. compute total \n 5. quit')
   choice = input('enter your choice: ')
-elif choice == '5':
-  print('goodbye :)')
-  quit
+
   
 
 
