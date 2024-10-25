@@ -1,5 +1,4 @@
 # Victoria Lutz
-import pathlib
 from pathlib import Path
 
 maximum = 0
