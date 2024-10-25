@@ -43,7 +43,7 @@ for index, line in enumerate(lines):
             year_count += 1
 
 print(
-    f'The max life expectancy was in {maximum_country} with {maximum} in the year {max_year}')
+    f'\nThe max life expectancy was in {maximum_country} with {maximum} in the year {max_year}')
 print(
     f'The minimum life expectancy was in {minimum_country} with {minimum} in the year {min_year}')
 
@@ -51,15 +51,15 @@ print(
 # is then dividing by it will result in an error. You can't divide by zero.
 if year_count > 0:
     year_average = year_sum / year_count
-    print(f"For the year {year_input}:")
+    print(f"\nFor the year {year_input}:")
     print(
-        f"The average life expectancy across all countries was {year_average}")
+        f"\n\tThe average life expectancy across all countries was {year_average}")
     # TODO from dad. Have a year_minimum, year_minimum_country, year_maximum,
     # and year_maximum_country that you set like you do the other minimum, and
     # maximum. Then print out "The max life expectancy was in {country} with {year_maximum}",
     # and "The min life expectancy was in {country} with {year_minimum}"
 else:
-    print("There is no data available for the year you entered. ")
+    print("\nThere is no data available for the year you entered. ")
 
 # TODO from dad. PEP TALK. You are doing very good. You took my hints and were
 # pretty close to get this initially working. They are trying to teach you the basics
