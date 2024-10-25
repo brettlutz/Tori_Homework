@@ -37,7 +37,10 @@ for index, line in enumerate(lines):
         # TODO from dad. I added this if statement. Getting the year minimum and
         # maximum would be handled in this if statement
         if year == year_input:
+            # we start year_sum = 0, and now if the years match we add the life expectancy to the sum
             year_sum += life_expectancy
+            # to take an average you have to know how many items you added together, so this starts at 0
+            # and we add 1 each time the years match
             year_count += 1
 
 print(
