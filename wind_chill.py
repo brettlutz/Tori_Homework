@@ -16,6 +16,7 @@ def calculate_windchill(temp, type):
         print(
             f"At temperature {'{: .2f}'.format(beginning_temp)}°F, and wind speed of {speed} mph, the windchill is: {'{: .2f}'.format(chill)}°F")
 
-    temperature = input("\nWhat is the temperature? ")
-    celsius_fahrenheit = input("Fahrenheit or Celsius (F/C)? ")
-    calculate_windchill(temperature, celsius_fahrenheit)
+
+temperature = input("\nWhat is the temperature? ")
+celsius_fahrenheit = input("Fahrenheit or Celsius (F/C)? ")
+calculate_windchill(temperature, celsius_fahrenheit)
