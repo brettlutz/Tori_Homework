@@ -16,9 +16,10 @@ def is_a_number(value):
 
 def calculate_windchill(temp, type):
     print("\n")
-    if (not is_a_number(temp)):
+    is_number = is_a_number(temp)
+    if (not is_number):
         print("** You have entered and invalid temperature. **")
-        start()
+        main()
         return
     beginning_temp = float(temp)
     if type.lower() == 'c':
@@ -30,10 +31,10 @@ def calculate_windchill(temp, type):
             f"At temperature {'{: .2f}'.format(beginning_temp)}°F, and wind speed of {speed} mph, the windchill is: {'{: .2f}'.format(chill)}°F")
 
 
-def start():
+def main():
     temperature = input("\nWhat is the temperature? ")
     celsius_fahrenheit = input("Fahrenheit or Celsius (F/C)? ")
     calculate_windchill(temperature, celsius_fahrenheit)
 
 
-start()
+main()
