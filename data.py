@@ -24,7 +24,7 @@ year_sum = 0
 year_count = 0
 year_average = 0
 
-file_path = Path('life-expectancy.csv')
+file_path = Path('../life-expectancy.csv')
 text = file_path.read_text()
 lines = text.splitlines()
 
@@ -53,15 +53,16 @@ for index, line in enumerate(lines):
         if year_input == year:
             year_sum += life_expectancy
             year_count += 1
-           
+
             if life_expectancy < year_minimum:
                 year_minimum = life_expectancy
                 input_country_min = country
             if life_expectancy > year_maximum:
                 year_maximum = life_expectancy
                 input_country_max = country
+<<<<<<< HEAD
                 
-        if country_input == country:
+        if country_input.lower() == country.lower():
           country_input = country
           if life_expectancy < country_data_min:
             country_data_min = life_expectancy
@@ -70,6 +71,18 @@ for index, line in enumerate(lines):
             country_data_max = life_expectancy
             country_year_big = year
                      
+=======
+
+        if country_input == country:
+            country_input = country
+            if life_expectancy < country_data_min:
+                country_data_min = life_expectancy
+                country_year_small = year
+            if life_expectancy > country_data_max:
+                country_data_max = life_expectancy
+                country_year_big = year
+
+>>>>>>> 44b3bfe477afbea4cbe536bb84dd912a9287edef
 
 print(
     f'The overall max life expectancy was in {maximum_country} with {maximum} in the year {max_year}')
@@ -77,12 +90,21 @@ print(
     f'The overall minimum life expectancy was in {minimum_country} with {minimum} in the year {min_year}')
 
 
-if country_input == country:
+<<<<<<< HEAD
+if country_input.lower() == country.lower():
   print(f'For the country {country_input}')
   print(
     f'The max life expectancy in {country_input} was in {country_year_big} with {country_data_max}\n')
   print(f'The min life expectancy in {country_input} was in {country_year_small} with {country_data_min}\n ')
 
+=======
+if country_input == country:
+    print(f'For the country {country_input}')
+    print(
+        f'The max life expectancy in {country_input} was in {country_year_big} with {country_data_max}\n')
+    print(
+        f'The min life expectancy in {country_input} was in {country_year_small} with {country_data_min}\n ')
+>>>>>>> 44b3bfe477afbea4cbe536bb84dd912a9287edef
 
 
 if year_count > 0:
