@@ -17,7 +17,7 @@ def is_a_number(value):
 def calculate_windchill(temp, type):
     print("\n")
     is_number = is_a_number(temp)
-    if (not is_number):
+    if (is_number == False):
         print("** You have entered and invalid temperature. **")
         main()
         return
