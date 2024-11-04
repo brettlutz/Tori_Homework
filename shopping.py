@@ -61,4 +61,4 @@ elif choice == '4':
     print('1. add to cart \n 2. display cart \n 3. remove item \n 4. compute total \n 5. quit')
     choice = input(ENTER)
 
-    # test for commit message
+    # test for commit message 2
