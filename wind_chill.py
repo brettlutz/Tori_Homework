@@ -2,10 +2,6 @@ def celsius_to_fahrenheit(temp):
     return (float(temp) - 32) * 5/9
 
 
-def fahrenheit_to_celsius(temp):
-    return (9 / 5) * float(temp) + 32
-
-
 def calculate_windchill(temp, type):
     beginning_temp = float(temp)
     if type.lower() == 'c':
