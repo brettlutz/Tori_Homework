@@ -14,7 +14,8 @@ def display_cart(cart):
         print(f'{item["name"]}: ${item["price"]}')
         total_price += item["price"]
     print(f'total price $: {total_price:.2f}')
-    
+
+
 CHOICES = ' 1. add to cart \n 2. display cart \n 3. remove item \n 4. compute total \n 5. quit'
 ENTER = "enter your choices: "
 
@@ -59,3 +60,5 @@ elif choice == '4':
     print(f'your total is ${total_price:.2f}')
     print('1. add to cart \n 2. display cart \n 3. remove item \n 4. compute total \n 5. quit')
     choice = input(ENTER)
+
+    # test for commit message 2
