@@ -1,29 +1,78 @@
 # adventure game
+danger = 0
+flashlight = False
 
-# creativity: i added a unique function i like to call the DANGER METER. it will increase or decrease depending on what the user does, and will ultimately determine whether the user wins or loses.
-# also secret ending if you decide to stay in your room and go back to bed. another secret ending if you jump out the window, and another secret ending if you order pizza. i really hope that i have enough variety of scenarios, like the bedroom scenario, and then the hallway scenario, and then the living room scenario, and then the kitchen scenario, and then the final confrontation scenario. thats what you mean by scenario, right? please like an hour ago i reread the grading rubric and im afraid i misunderstood what a scenario is.
-# i added branching, also i saved flashlight and managed to use it in two different areas, making it function as a tool
+
+def up_danger():
+    global danger
+    danger += 1
+
+
+def down_danger():
+    global danger
+    if danger > 0:
+        danger -= 1
+
+
+def dress_option():
+    dressed = input(
+        '\nYou notice you are wearing pajamas. would you like to get dressed? (YES/NO) ')
+    if dressed.strip().lower() == 'yes' or dressed.strip().lower() == 'y':
+        up_danger()
+        print('Ok, might as well cover up and look good while investigating.')
+        print(f'Danger level: {danger}')
+        return True
+    else:
+        print('Probably not worth the effort. Likely just the neighbors cat anyway.')
+        print(f'Danger level: {danger}')
+        return False
+
+
+def search():
+    search = input('\nWould you like to search for something useful? (YES/NO)')
+    if search.strip().lower() == 'yes' or search.strip().lower() == 'y':
+        down_danger()
+        print('Good idea. Hmmm, oh look, a flashlight!')
+        print(f"Danger level: {danger}")
+        return True
+    else:
+        up_danger()
+        print("Yeah, this isn't a big deal, let's go!")
+        print(f"Danger level: {danger}")
+        return False
+
+
+def flashlight_decision():
+    pickup = input('\nDo you want to take the flashlight? (YES/NO)')
+    if pickup.strip().lower() == 'yes' or pickup.strip().lower() == 'y':
+        print("Smart move. A little light is sure to help.")
+        print(f"Danger level: {danger}")
+        return True
+    else:
+        up_danger()
+        print('Probably needs batteries anyway. Good decision')
+        print(f"Danger level: {danger}")
+        return False
+
 
 print('You wake up suddenly to loud crash. You were sound asleep in the bedroom of your own home. Gradually, you come to your senses. The noise sounded like a window was broken near the living room.')
-print('You have the option to DRESS YOURSELF, SEARCH the cabinets, and to PROCCEED down the hallway.')
-print("NOTE: taking certain actions will increase or decrease the DANGER level. Take caution to your decisions.")
-print("NOTE: answer yes or no questions with a full 'yes' or 'no', and options are displayed in full caps.")
-
-# variables:
-# LastInpoutFunction, Flashlight,
-
-# set the danger meter
-Danger = 0
-
-# flashlight gets mad at line 29 if i dont have this. its dumb, but true. " ' ' " IS EQUAL TO TRUE, SO I CHANGED TO FALSE. LINES 65 - 80 WORK NOW BUT ITS ONLY A TEMPORARY AND CRUDE FIX (line 26 explains the problem). WTF AM I MISSING.
-FlashLight = False
+print('You have the option to DRESS YOURSELF, SEARCH the cabinets, and to PROCEED down the hallway.')
 
 # dress prompt and action.
-lastInputFunction = input(
-    '\nYou notice you are wearing pajamas. would you like to get DRESSED? ')
-if lastInputFunction.lower() in ('dress', 'yourself', 'myself', 'yes', 'dressed'):
-    print('You take the time to dress yourself in something besides your pajamas.')
-    Danger = Danger + 1
+get_dressed = dress_option()
+if get_dressed:
+    look_around = search()
+    if look_around:
+        pick_it_up = flashlight_decision()
+        if pick_it_up:
+
+        else:
+
+    else:
+
+else:
+    look_around = search()
+
 
 # search prompt and action LINES 30-34 DONT DO ANYTHING. THEY DONT CHANGE THE FLASHLIGHT VARIABLE AT ALL. I JUST CHECKED
 lastInputFunction = input(
