@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Victoria Lutz">
+  <meta name="description" content="A landing page with information about the author">
+  <meta name="og:title" content="WDD 231- Homepage">
+  <meta name="og:description" content="A landing page with information about the author">
+  <meta name="image"
+    content="https://cdn.discordapp.com/attachments/1342668697285824555/1342722006885601333/IMG_1630.png?ex=686ff111&is=686e9f91&hm=509a679258d00f9a1785114483ce1ed2998107fb560f1faa57f3d5fec3e73b13&">
+  <meta name="url" content="https://www.victorialutz.com">
+
+  <title>WDD 231 – Victoria Lutz</title>
+
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/style-larger.css">
+  <link rel="icon" href="./images/favicon.ico">
+
+  <script src="./scripts/last_modified.js" defer></script>
+  <script src="./scripts/hamburger.js" defer></script>
+  <script src="./scripts/courses.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+
+<body>
+  <header>
+    <div class="menu"><img class="logo" src="./images/temp_logo.png"
+        alt="Logo that looks like a house, current filler until i get a proper logo for this project" loading="lazy">
+      <h1 class="head-font">WDD 231: Web Frontend Development I</h1>
+    </div>
+    <nav>
+      <ul class="navigation ">
+        <li class="body-font" href="#">Home</li>
+        <li class="body-font" href="#">Chamber Project</li>
+        <li class="body-font" href="#">Final Project</li>
+      </ul>
+
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+  <h1 class="head-font">HOME</h1>
+  <div class="container">
+    <section>
+      <h2 class="head-font card-header">About Me!</h2>
+      <p class="body-font about">My name is Victoria Lutz, I am a visually impaired martial artist and
+        artist in general. I was born and raised in WoodsCross Utah and have stayed here
+        for 24 years.
+        I am currently working as a Veterinary Technician Assistant and love animals!</p>
+    </section>
+    <section class="profile">
+      <h2 class="body-font card-header">Student Photo</h2>
+      <img class="profile-img" src="./images/profile.jpg"
+        alt="a photo of me and my boyfriend in Portalnd Castle by a cannon" loading="lazy">
+    </section>
+  </div>
+
+
+  <section>
+    <h2 class="body-font card-header">Web Certificate Courses!</h2>
+
+    <div class="course-nav">
+      <button class="body-font courseButton" value="all" title="Filter button" id="all">ALL</button>
+      <button class="body-font courseButton" value="all" title="Filter button" id="wdd">WDD</button>
+      <button class="body-font courseButton" value="all" title="Filter button" id="cse">CSE</button>
+    </div>
+    <div class="boxcertificate01 boxCourse" id="box-course"></div>
+    <dialog id="courses-details"></dialog>
+    <p id="totalCreditsCert01"><strong>Total Credits:</strong> <span id="credits">0</span></p>
+
+
+
+  </section>
+  <footer>
+    <a href="https://www.linkedin.com/in/victoria-lutz-775852314/"><img class="link-img"
+        src="./images/linkedin-linked-in-svgrepo-com.svg" alt="linkedin logo" loading="lazy"></a>
+    <a href="https://github.com/ToriLutz"><img class="link-img" src="./images/github-square-svgrepo-com.svg"
+        alt="github logo" loading="lazy"></a>
+    <a href="https://www.youtube.com"><img class="link-img" src="./images/youtube-168-svgrepo-com.svg"
+        alt="youtube logo" loading="lazy"></a>
+    <p class="body-font">&copy; <span id="currentYear"></span> Victoria Lutz | Utah</p>
+    <p id="lastModified"></p>
+
+  </footer>
+
+
+</body>
+
+</html>
